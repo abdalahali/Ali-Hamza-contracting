@@ -1215,4 +1215,23 @@ footer {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+
+}
+
+
+/* للهواتف - شاشة أصغر من 768px */
+@media (max-width: 768px) {
+  .loading-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #introLogo {
+    position: static;  /* ما يحتاج fixed على الهاتف */
+    transform: none;   /* نشيل translate اللي يخرب التمركز */
+    width: 60vw;       /* حجم مناسب للشاشات الصغيرة */
+    max-width: 200px;  /* حد أقصى */
+    height: auto;
+  }
 }
