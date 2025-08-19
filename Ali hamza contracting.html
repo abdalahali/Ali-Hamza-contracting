@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ali Hamza Constructions - خبرة في التصميم الهندسي، الاستشارات الفنية، وإدارة المشاريع.">
+    <meta name="keywords" content="Construction, Engineering, Project Management, Ali Hamza, Civil Engineering">
+    <title>Ali Hamza Constructions</title>
+    <link rel="icon" type="image/png" href="Ali Hamza Constructions -Photoroom.WebP">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="ALI.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+    <div class="loader" id="pageLoader">
+        <!-- حرف A -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#b)"
+            d="M32 4 L4 60 H16 L24 44 H40 L48 60 H60 L32 4 Z M24 36 L40 36"
+            class="dash" pathLength="360"></path>
+        </svg>
+
+        <div class="w-2"></div>
+
+        <!-- حرف L -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#c)"
+            d="M16 4 V60 H52" class="dash" pathLength="360"></path>
+        </svg>
+
+        <div class="w-2"></div>
+
+        <!-- حرف i -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#d)"
+            d="M32 20 V60 M32 4 V10" class="dash" pathLength="360"></path>
+        </svg>
+    </div>
+
+    <!-- التعريفات اللونية -->
+    <svg height="0" width="0">
+        <defs>
+        <linearGradient id="b" gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0">
+            <stop stop-color="#973BED"></stop>
+            <stop stop-color="#007CFF" offset="1"></stop>
+        </linearGradient>
+        <linearGradient id="c" gradientUnits="userSpaceOnUse" y2="0" x2="0" y1="64" x1="0">
+            <stop stop-color="#FFC800"></stop>
+            <stop stop-color="#F0F" offset="1"></stop>
+        </linearGradient>
+        <linearGradient id="d" gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0">
+            <stop stop-color="#00E0ED"></stop>
+            <stop stop-color="#00DA72" offset="1"></stop>
+        </linearGradient>
+        </defs>
+    </svg>
+    </div>
+
+
+    <!-- Intro logo (خارج الـ overlay حتى نقدر نتحكم به ونجري التحريك بشكل مستقل) -->
+    <img id="introLogo" src="Ali Hamza Constructions -Photoroom.WebP" alt="Intro Logo" />
+
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation -->
+    <div class="nav-container">
+        <div class="nav-bar">
+            <button class="nav-button active" onclick="showPage('home')" title="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                </svg>
+            </button>
+            <button class="nav-button" onclick="showPage('certificates')" title="Certificates & Education">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+                </svg>
+            </button>
+            <button class="nav-button" onclick="showPage('projects')" title="Projects">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                </svg>
+            </button>
+            <button class="nav-button" onclick="showPage('features')" title="Special Features">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+        <!-- داخل .nav-bar -->
+    <img id="navLogo" class="nav-logo" src="Ali Hamza Constructions -Photoroom.WebP" alt="Logo" aria-hidden="true">
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="hero-section section">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="img/صورة واتساب بتاريخ 1447-02-18 في 15.19.26_d75447cf.jpg" alt="Profile Image" />
+                    </div>
+                    <div class="profile-text">
+                        <h1>Ali Hamza Constructions</h1>
+                        <h2>Engineering Excellence</h2>
+                        <p>Professional engineering services with cutting-edge solutions. We specialize in innovative design, technical consulting, and project management to bring your vision to reality.</p>
+                        <p>With years of experience and a passion for excellence, we deliver results that exceed expectations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <div class="section">
+                <h2 class="section-title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🏗️</div>
+                        <h3>Structural Design</h3>
+                        <p>Comprehensive structural analysis and design for residential, commercial, Concrete, iron and industrial projects.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3>Electrical Systems</h3>
+                        <p>Complete electrical engineering solutions including power distribution, lighting, and automation systems.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Mechanical Engineering</h3>
+                        <p>HVAC systems, mechanical design, and industrial equipment solutions for optimal performance.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Project Management</h3>
+                        <p>End-to-end project coordination ensuring timely delivery and quality results.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔍</div>
+                        <h3>Technical Consulting</h3>
+                        <p>Expert advice and feasibility studies for complex engineering challenges.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📐</div>
+                        <h3>CAD Design</h3>
+                        <p>Professional 2D and 3D modeling, drafting, and technical documentation services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="section">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-card" onclick="window.location.href='mailto:alihamza_07@yahoo.com'">
+                        <div class="service-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>alihamza_07@yahoo.com</p>
+                    </div>
+                    <div class="contact-card" onclick="window.location.href='tel:+249123399840'">
+                        <div class="service-icon">📱</div>
+                        <h3>Phone</h3>
+                        <p>+249123399840</p>
+                    </div>
+                    <div class="contact-card" onclick="window.location.href='https://maps.app.goo.gl/Cxpyiis5nhhoFAUx7'">
+                        <div class="service-icon">📍</div>
+                        <h3>Location</h3>
+                        <p>مدني الزمالك<br>تقاطع شارع النيل مع شارع مظلة خالد</p>
+                    </div>
+                    <div class="contact-card"  onclick="window.open('https://wa.me/249123399840?text=السلام%20عليكم','_blank')">
+                        <div class="service-icon"><i class="fa-brands fa-whatsapp" style="color: #1eff44;"></i></div>
+                        <h3>whatsapp</h3>
+                        <p>Contact us on WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificates & Education Page -->
+    <div id="certificates" class="page">
+            <div class="container">
+                <h2 class="section-title">Certificates & Education</h2> 
+                <!-- Certificates Section -->
+                <div class="section">
+                    <h3 style="color: white; font-size: 2rem; margin-bottom: 30px; text-align: center;">🎓 Professional Certificates</h3>
+                    <div class="certificate-container">
+                    <div class="certificate-card">
+                        <!-- صورة الشهادة (صورتين تتبدل) -->
+                        <div class="certificate-image">
+                            <img src="img/شهادة.png" alt="Certificate 1">
+                            <img src="img/شهادة_1.png" alt="Certificate 2">
+                        </div>
+
+                        <!-- التعريف -->
+                        <div class="certificate-info">
+                            <h3>Specialist Engineer</h3>
+                            <p>Engineering Council • 2010</p>
+                        </div>
+
+                        <!-- التفاصيل -->
+                        <div class="certificate-details">
+                            Specialist Engineer Certification — validating advanced technical expertise, strengthening problem-solving capabilities, enhancing professional
+                            credibility, and opening pathways for leadership and career advancement.
+                        </div>
+
+                        <!-- البادجات -->
+                        <span class="certificate-badge">Licensed</span>
+                        <span class="certificate-badge">Structural</span>
+                    </div>
+                    <div class="certificate-card">
+                        <!-- صورة الشهادة -->
+                        <div class="certificate-image">
+                            <img src="img/2021-03-07_103448شهادة التسجيل.jpg" alt="Certificate Image">
+                        </div>
+
+                        <!-- التعريف الأساسي -->
+                        <div class="certificate-info">
+                            <h3>Ali Hamza Contracting Office</h3>
+                            <p>Ministry of Justice • 2017</p>
+                        </div>
+
+                        <!-- التفاصيل -->
+                        <div class="certificate-details">
+                            Ali Hamza Contracting Office Certification — recognizing excellence in engineering and construction, demonstrating technical expertise, commitment to quality, and the ability
+                            to deliver safe, efficient, and innovative projects across residential, commercial, and industrial sectors.
+                        </div>
+
+                        <!-- البادجات -->
+                        <span class="certificate-badge">Licensed</span>
+                        <span class="certificate-badge">Structural</span>
+                    </div>
+
+                    
+                    <div class="certificate-card">
+                        <!-- صورة الشهادة -->
+                        <div class="certificate-image">
+                            <img src="img/image.png" alt="Certificate Image">
+                        </div>
+
+                        <!-- التعريف الأساسي -->
+                        <div class="certificate-info">
+                            <h3>Saudi Council of Engineers</h3>
+                            <p>Saudi Council of Engineers• 2025</p>
+                        </div>
+
+                        <!-- التفاصيل -->
+                        <div class="certificate-details">
+                            Saudi Council of Engineers Registration — officially recognizing professional competence, validating engineering expertise, enhancing credibility, and enabling participation
+                            in national projects with adherence to the highest technical and ethical standards.
+                        </div>
+
+                        <!-- البادجات -->
+                        <span class="certificate-badge">Licensed</span>
+                        <span class="certificate-badge">Structural</span>
+                    </div>
+                    <div class="certificate-card">
+                        <!-- صورة الشهادة -->
+                        <div class="certificate-image_1">
+                            <img src="img/شهادة_3.png" alt="Certificate Image">
+                        </div>
+
+                        <!-- التعريف الأساسي -->
+                        <div class="certificate-info">
+                            <h3>Total Quality Management (TQM)</h3>
+                            <p> SBC •2024</p>
+                        </div>
+
+                        <!-- التفاصيل -->
+                        <div class="certificate-details">
+                            Master the principles of TQM — drive continuous improvement, ensure customer
+                            satisfaction, and achieve operational excellence.
+                        </div>
+
+                        <!-- البادجات -->
+                        <span class="certificate-badge">Licensed</span>
+                        <span class="certificate-badge">Structural</span>
+                    </div>
+                    <div class="certificate-card">
+                        <!-- صورة الشهادة -->
+                        <div class="certificate-image_1">
+                            <img src="img/شهادة_2.png" alt="Certificate Image">
+                        </div>
+
+                        <!-- التعريف الأساسي -->
+                        <div class="certificate-info">
+                            <h3>certificate (PMP)</h3>
+                            <p> SDC • 2024</p>
+                        </div>
+
+                        <!-- التفاصيل -->
+                        <div class="certificate-details">
+                            Globally recognized PMP certification — validating project leadership, improving 
+                            efficiency, reducing risks, and driving successful outcomes across industries.
+                        </div>
+
+                        <!-- البادجات -->
+                        <span class="certificate-badge">Licensed</span>
+                        <span class="certificate-badge">Professional</span>
+                    </div>
+                    <div class="certificate-card">
+                        <!-- صورة الشهادة -->
+                        <div class="certificate-image_1">
+                            <img src="img/شهادة_4.jpg" alt="Certificate 1">
+                            <img src="img/شهادة_5.jpg" alt="Certificate 2">
+                        </div>
+
+                        <!-- التعريف الأساسي -->
+                        <div class="certificate-info">
+                            <h3>Certificates (MMP) and  (OSHA) </h3>
+                            <p> SBC •2024</p>
+                        </div>
+
+                        <!-- التفاصيل -->
+                        <div class="certificate-details">
+                            Professional certifications that empower career growth and organizational excellence — OSHA Professional Development strengthens workplace safety, 
+                            minimizes risks, and fosters a culture of protection, while Marketing Management Professional (MMP) advances strategic marketing capabilities, drives brand performance, and maximizes business impact.
+                        </div>
+
+                        <!-- البادجات -->
+                        <span class="certificate-badge">Licensed</span>
+                        <span class="certificate-badge">Professional</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Education Section -->
+            <div class="section">
+                <h3 style="color: white; font-size: 2rem; margin-bottom: 30px; text-align: center;">🎓 Education & Courses</h3>
+                <div class="certificate-container">
+                    <div class="certificate-card">
+                        <div class="certificate-header">
+                            <div class="certificate-icon">🎓</div>
+                            <div class="certificate-info">
+                                <h3>Master of Engineering</h3>
+                                <p>MIT • 2015-2017</p>
+                            </div>
+                        </div>
+                        <div class="certificate-details">
+                            Master's degree in Civil and Environmental Engineering with focus on structural analysis, earthquake engineering, and sustainable infrastructure design.
+                        </div>
+                        <span class="certificate-badge">GPA: 3.8</span>
+                        <span class="certificate-badge">Structural Focus</span>
+                    </div>
+                    
+                    <div class="certificate-card">
+                        <div class="certificate-header">
+                            <div class="certificate-icon">📚</div>
+                            <div class="certificate-info">
+                                <h3>Bachelor of Engineering</h3>
+                                <p>Stanford University • 2011-2015</p>
+                            </div>
+                        </div>
+                        <div class="certificate-details">
+                            Bachelor's degree in Civil Engineering with honors. Specialization in structural design, materials science, and construction management.
+                        </div>
+                        <span class="certificate-badge">Magna Cum Laude</span>
+                        <span class="certificate-badge">Civil Engineering</span>
+                    </div>
+                    
+                    <div class="certificate-card">
+                        <div class="certificate-header">
+                            <div class="certificate-icon">🧑‍💼</div>
+                            <div class="certificate-info">
+                                <h3>Consulting Engineer</h3>
+                                <p>Coursera • 2022</p>
+                            </div>
+                        </div>
+                        <div class="certificate-details">
+                            Professional Consulting Engineer — delivering expert guidance, innovative solutions, and technical oversight
+                            for complex projects to ensure safety, compliance, and sustainable performance.
+                        </div>
+                        <span class="certificate-badge">Online Course</span>
+                        <span class="certificate-badge">40 Hours</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Skills Section -->
+            <div class="section">
+                <h3 style="color: white; font-size: 2rem; margin-bottom: 40px; text-align: center;">🛠️ Technical Skills</h3>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Design Software</h3>
+                        <div class="skill-bar">
+                            <div class="skill-name"><span>AutoCAD</span><span>95%</span></div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-name"><span>Revit</span><span>90%</span></div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-name"><span>Civil 3D</span><span>85%</span></div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Analysis Tools</h3>
+                        <div class="skill-bar">
+                            <div class="skill-name"><span>ETABS</span><span>92%</span></div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-name"><span>SAP2000</span><span>88%</span></div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-name"><span>ANSYS</span><span>75%</span></div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Project Management</h3>
+                        <div class="skill-bar">
+                            <div class="skill-name"><span>Team Leadership</span><span>99%</span></div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-name"><span>Budget Management</span><span>97%</span></div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-name"><span>Risk Assessment</span><span>97%</span></div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="page">
+        <div class="container">
+            <h2 class="section-title">Our Projects</h2>
+            <div class="section">
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/1.jpg">    
+                        </div>
+                        <div class="project-content">
+                            <span class="project-status status-progress">In Progress</span>
+                            <h3 style="color: white; margin-bottom: 15px;">منزل علي حمزه</h3>
+                            <p style="color: rgba(255,255,255,0.8);">منزل عصري بتصميم أنيق، واجهة حجرية مع شرفات دائرية وزجاج واسع يمنح إطلالة مشرقة، ومساحات رحبة توحي بالفخامة والراحة</p>
+                        </div>
+                    </div>            
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/10.jpg">  
+                        </div>
+                        <div class="project-content">
+                            <span class="project-status status-completed">Completed</span>
+                            <h3 style="color: white; margin-bottom: 15px;">مدني_سوقطره</h3>
+                            <p style="color: rgba(255,255,255,0.8);">في هذا المشروع، يظهر التزامنا بالجودة والدقة في كل خطوة من خطوات البناء. نحن نختص في تنفيذ المشاريع الإنشائية من الأساسات وحتى الهيكل الخرساني، مع ضمان أعلى معايير الجودة والمتانة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/3.jpg">  
+                        </div>
+                        <div class="project-content">
+                            <span class="project-status status-completed">Completed</span>
+                            <h3 style="color: white; margin-bottom: 15px;">د.مبارك</h3>
+                            <p style="color: rgba(255,255,255,0.8);">ينبض هذا الصرح بتصميم عصري يمزج بين صلابة البناء ولمسة جمالية أنيقة. يعكس الهيكل الخرساني المتين رؤية هندسية دقيقة، بينما تضفي اللمسات الحجرية المميزة على الواجهة رونقًا فريدًا. يمثل هذا التصميم مزيجًا متناغمًا من القوة والجمال، مما يجعله إضافة قيمة للبيئة المحيطة.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/12.jpg">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-status status-completed">Completed</span>
+                            <h3 style="color: white; margin-bottom: 15px;">مدني د.حمد</h3>
+                            <p style="color: rgba(255,255,255,0.8);">حيث يبرز الهيكل الخرساني القوي الذي يشكل أساسًا راسخًا. يظهر الاهتمام بالتفاصيل الإنشائية في توزيع الأعمدة والكمرات، مما يوحي بتصميم هندسي مدروس يهدف إلى تحقيق الاستدامة والمتانة. استخدام الطوب في الجدران يعكس مزيجًا من الأصالة والعملية في مواد البناء المختارة.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/14.jpg">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-status status-progress">In Progress</span>
+                            <h3 style="color: white; margin-bottom: 15px;">مدني </h3>
+                            <p style="color: rgba(255,255,255,0.8);">يتميز هذا المبنى بتصميمه الذي يجمع بين الحداثة والأصالة، حيث يبرز في الواجهة استخدام كتل حجرية طبيعية تضفي لمسة من الفخامة والدفء. يعكس الهيكل الإنشائي المتقن التزامًا بالجودة، مما يجعل المبنى إضافة معمارية مميزة تجمع بين الجمال والمتانة.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/29.jpg">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-status status-completed">Completed</span>
+                            <h3 style="color: white; margin-bottom: 15px;">مدني أ.عمر</h3>
+                            <p style="color: rgba(255,255,255,0.8);">
+                                يظهر هذا المبنى تصميماً يجمع بين القوة الإنشائية والجمال التقليدي. يتميز بهيكله الخرساني المتين الذي يبرز من خلال الكمرات الممتدة، بينما يضفي الطوب المكشوف لمسة أصيلة ودافئة على الواجهة. الأقواس المزخرفة عند المدخل والبوابة الحديدية الأنيقة تعكس اهتماماً بالتفاصيل التي تمنح المبنى شخصية فريدة
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects-slider-container"> 
+            <div class="slide">
+                <div class="item" style="background-image: url(img/1.jpg);">
+                    <div class="content">
+                        <div class="name">مدني _ حنتوب</div>
+                        <div class="des">منزل عصري بتصميم أنيق، واجهة حجرية مع شرفات دائرية وزجاج واسع يمنح إطلالة مشرقة</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/2.jpg);">
+                    <div class="content">
+                        <div class="name">الخرطوم</div>
+                        <div class="des">ابواب مستورده و ذات قوة و متانه عاليه مضاضه للماء و عازله للصوت</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/3.jpg);">
+                    <div class="content">
+                        <div class="name">الخرطوم</div>
+                        <div class="des">منزل د.مبارك مصمم على طابقين بشكل رائع</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/4.jpg);">
+                    <div class="content">
+                        <div class="name">الخرطوم</div>
+                        <div class="des">جداراً داخلياً بتصميم حديث من الجبس، مُزيّن بإضاءات مخفية بألوان متدرجة بين الأزرق والبنفسجي مع لمسة بيضاء ناعمة، مما يمنح المكان روحاً عصرية مميزة. الأشكال الهندسية الموزّعة بشكل متوازن تضيف لمسة فنية أنيقة،</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/5.jpg);">
+                    <div class="content">
+                        <div class="name">مدني _ حنتوب</div>
+                        <div class="des">واجهة أنيقة بأحجار طبيعية تعكس جمال التفاصيل وقوة التنفيذ، لتمنح المبنى شخصية فريدة ومظهرًا احترافياً.</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/6.jpg);">
+                    <div class="content">
+                        <div class="name">مدني _ حنتوب</div>
+                        <div class="des">واجهة أنيقة بأحجار طبيعية تعكس جمال التفاصيل وقوة التنفيذ، لتمنح المبنى شخصية فريدة ومظهرًا احترافياً</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/7.jpg);">
+                    <div class="content">
+                        <div class="name">مدني _ حنتوب</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/8.jpg);">
+                    <div class="content">
+                        <div class="name">الخرطوم</div>
+                        <div class="des">منزل د.مبارك مصمم على طابقين بشكل رائع</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/9.jpg);">
+                    <div class="content">
+                        <div class="name">الخرطوم</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/10.jpg);">
+                    <div class="content">
+                        <div class="name">مدني_سو قطره</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/11.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/12.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/13.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/14.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/15.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/16.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/17.jpg);">
+                    <div class="content">
+                        <div class="name">الصين</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/18.jpg);">
+                    <div class="content">
+                        <div class="name">الصين</div>
+                        <div class="des"></div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/19.jpg);">
+                    <div class="content">
+                        <div class="name">الصين</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/20.jpg);">
+                    <div class="content">
+                        <div class="name">الصين</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/21.jpg);">
+                    <div class="content">
+                        <div class="name">مدني_حنتوب</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/22.jpg);">
+                    <div class="content">
+                        <div class="name">الصين</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/23.jpg);">
+                    <div class="content">
+                        <div class="name">مدني_حنتوب</div>
+                        <div class="des">عازل مائي</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/24.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/25.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/26.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/27.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/28.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(img/29.jpg);">
+                    <div class="content">
+                        <div class="name">مدني</div>
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                <div class="button">
+                    <button class="prev">
+                        <div class="button-box">
+                        <span class="button-elem">
+                            <svg viewBox="0 0 24 24">
+                            <path
+                                fill="#ff7f50"
+                                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                            ></path>
+                            </svg>
+                        </span>
+                        <span class="button-elem">
+                            <svg fill="#ff7f50" viewBox="0 0  24 24">
+                            <path
+                                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                            ></path>
+                            </svg>
+                        </span>
+                        </div>
+                    </button>
+
+                    <button class="next">
+                        <div class="button-box">
+                        <span class="button-elem">
+                            <svg viewBox="0 0 24 24">
+                            <path
+                                fill="#ff7f50"
+                                d="M4 13h12.17l-5.59 5.59L12 20l8-8-8-8-1.41 1.41L16.17 11H4v2z"
+                            ></path>
+                            </svg>
+                        </span>
+                        <span class="button-elem">
+                            <svg fill="#ff7f50" viewBox="0 0  24 24">
+                            <path
+                                d="M4 13h12.17l-5.59 5.59L12 20l8-8-8-8-1.41 1.41L16.17 11H4v2z"
+                            ></path>
+                            </svg>
+                        </span>
+                        </div>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>                
+    <!-- Features Page -->
+    <div id="features" class="page">
+        <div class="container">
+            <h2 class="section-title">Special Features</h2>
+            <div class="section">
+                <div class="feature-card">
+                    <h3 style="color: white; margin-bottom: 20px; font-size: 1.8rem;"> ⚡solar energy</h3>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6;">
+                        Advanced solar PV systems for residential, retail, and industrial applications — precision-engineered 
+                        supply and turnkey installation that maximize energy yield, lower operating costs, and ensure long-term reliability.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3 style="color: white; margin-bottom: 20px; font-size: 1.8rem;"> 🌇 Non-destructive testing of buildings</h3>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6;">
+                        Advanced non-destructive testing (NDT) for buildings affected by environmental factors and design flaws — precise structural diagnostics, early fault detection, 
+                        and data-driven analysis that enhance safety, reduce risks, and extend service life
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">⚙️ steel truss design</h3>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6;">
+                        Advanced steel truss design, fabrication, and installation — precision-engineered structures that optimize
+                        load capacity, reduce material waste, and ensure long-term durability.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">🌱 Sustainable Design Solutions</h3>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6;">
+                        Environmentally conscious engineering with LEED certification expertise, energy-efficient systems, 
+                        and sustainable materials selection to minimize environmental impact and reduce operating costs.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">📱 Real-Time Project Monitoring</h3>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6;">
+                        Advanced IoT sensors and cloud-based monitoring systems provide real-time data on project progress, 
+                        structural health, and environmental conditions for proactive decision-making.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">🏠Quality Supply of Doors, Windows & ACs</h3>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6;">
+                        Delivering high-quality doors, windows, air conditioners, and premium outdoor solutions — combining
+                        durability, performance, and modern design to enhance comfort and style.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">🤖 AI-Powered Analysis</h3>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6;">
+                        Cutting-edge artificial intelligence integration for structural analysis, load optimization, 
+                        and predictive maintenance scheduling to enhance safety and performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <ul class="example-2">
+            <li class="icon-content">
+                <a
+                href="https://www.linkedin.com/in/AliHamzaMohamedAli"
+                aria-label="LinkedIn"
+                data-social="linkedin"
+                >
+                <div class="filled"></div>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-linkedin"
+                    viewBox="0 0 16 16"
+                    xml:space="preserve"
+                >
+                    <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                    fill="currentColor"
+                    ></path>
+                </svg>
+                </a>
+                <div class="tooltip">LinkedIn</div>
+            </li>
+            <li class="icon-content">
+                <a href="https://www.tiktok.com/@ali_hamza_contracting?_t=ZS-8z15ZvKWtmh&_r=1" aria-label="Tiktok" data-social="Tiktok">
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                </svg>
+                    <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                    fill="currentColor"
+                    ></path>
+                </svg>
+                </a>
+                <div class="tooltip">Tiktok</div>
+            </li>
+            <li class="icon-content">
+                <a
+                href="https://wa.me/971527676135?text=السلام%20عليكم"
+                aria-label="whatsapp"
+                data-social="whatsapp"
+                >
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                </svg>
+                </a>
+                <div class="tooltip">whatsapp</div>
+            </li>
+            <li class="icon-content">
+                <a
+                href="https://www.facebook.com/ali.h.adam.79?mibextid=ZbWKwL"
+                aria-label="facebook"
+                data-social="facebook"
+                >
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                </svg>
+                </a>
+                <div class="tooltip">facebook</div>
+            </li>
+            </ul>
+        </div>
+        <style>
+            ul {
+            list-style: none;
+            }
+
+            .example-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            .example-2 .icon-content {
+            margin: 0 10px;
+            position: relative;
+            }
+            .example-2 .icon-content .tooltip {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            padding: 6px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            }
+            .example-2 .icon-content:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            top: -50px;
+            }
+            .example-2 .icon-content a {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: #4d4d4d;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+            }
+            .example-2 .icon-content a:hover {
+            box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+            }
+            .example-2 .icon-content a svg {
+            position: relative;
+            z-index: 1;
+            width: 30px;
+            height: 30px;
+            }
+            .example-2 .icon-content a:hover {
+            color: white;
+            }
+            .example-2 .icon-content a .filled {
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: #000;
+            transition: all 0.3s ease-in-out;
+            }
+            .example-2 .icon-content a:hover .filled {
+            height: 100%;
+            }
+
+            .example-2 .icon-content a[data-social="linkedin"] .filled,
+            .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+            background-color: #0274b3;
+            }
+
+            .example-2 .icon-content a[data-social="Tiktok"] .filled,
+            .example-2 .icon-content a[data-social="Tiktok"] ~ .tooltip {
+            background-color: #24262a;
+            }
+            .example-2 .icon-content a[data-social="whatsapp"] .filled,
+            .example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+            background: linear-gradient(
+                45deg,
+                #91e136,
+                #1eff44
+            );
+            }
+            .example-2 .icon-content a[data-social="facebook"] .filled,
+            .example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+            background-color: #1f8fff;
+            }
+
+        </style>
+
+    </footer>
+    <script src="ali.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
